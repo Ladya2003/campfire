@@ -1,8 +1,8 @@
 // Функция, которая будет выполняться при нажатии на кнопку
 function playVideo() {
-
   const button = document.querySelector('.header-button');
   const button2 = document.querySelector('.header-button2');
+  const fasterBtn = document.querySelector('.fasterBtn');
   const video = document.querySelector('#bg-vid');
   const video2 = document.querySelector('.bg-vid2');
   const video3 = document.querySelector('.bg-vid3');
@@ -16,6 +16,7 @@ function playVideo() {
   button.addEventListener('click', function() {
     video.classList.add('bg-vid-dissapper');
     header.classList.add('animation-header-add');
+    fasterBtn.classList.add('fasterBtn-addAppear');
     audio.play();
     video2.play();
     video2.classList.add('filter-remove');
@@ -39,6 +40,10 @@ function playVideo() {
       });
 
     });
+  });
+
+  fasterBtn.addEventListener('click', function() {
+    video2.playbackRate = 5;
   });
   }
   

@@ -9,34 +9,52 @@
 </head>
 <body>
 
-    <div class="dragon">
-        <model-viewer src="models/dragon.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls shadow-intensity="1" autoplay>    </model-viewer>
-    </div>
+    <!--start page-->
 
     <div class="header-container">
         <div class="header-content-container">
-            <h1 class="header-content-text">Press the button to prove your worthy to our sociciety boy</h1>
-            <button class="header-button">Press me beatch</button>
+            <div class="header-content-text-button">
+                <h1 class="header-content-text">
+                    This Blog is a short story
+                    one extraordinarily
+                    creative and positive 
+                    person wrote
+                </h1>
+                <div class="button-dragon_caption">
+                    <button class="button header-button">Check it out</button>
+                    <p class="dragon-caption">
+                        but as for now, i’ve got a gorgeous dragon for ya ^^
+                    </p>
+                </div>
+                
+            </div>
+            <div class="header-content-dragon-text">
+                <model-viewer class="dragon" src="models/dragon.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls shadow-intensity="1" autoplay>    </model-viewer>
+            </div>
+            
         </div>
+        
     </div>
-
+    <img src="img/fast-forward.png" class="fasterBtn" />
+    <!--main menu-->
     <div class="header-container header-container2">
+        
         <div class="header-content-container header-content-container2">
             <h1 class="header-content-text">ты penis</h1>
             <button class="header-button2">Go to blog</button>
         </div>
     </div>
 
-    <video class="bg-vid bg-vid3" poster="img/poster3.jpg" src="vids/harryblog.mp4">
+    <video class="bg-vid bg-vid3" muted poster="img/poster3.jpg" src="vids/harryblog.mp4">
     </video>
 
-    <video class="bg-vid bg-vid2" poster="img/poster.jpg" src="vids/harrypotter.mp4">
+    <video class="bg-vid bg-vid2" muted poster="img/poster.jpg" src="vids/harrypotter.mp4">
     </video>
 
     <video loop muted autoplay id="bg-vid" class="bg-vid" poster="img/poster2.jpg" src="vids/clouds-beginning-slow.mp4">
     </video>
 
-    <audio id="myAudio" muted src="audio/harrypotter1.mp3"></audio>
+    <audio id="myAudio" src="audio/harrypotterr.mp3"></audio>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
 </body>
 </html>

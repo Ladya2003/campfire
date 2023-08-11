@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Inter;
+    src: url(../font/Inter-VariableFont_slnt\,wght.ttf);
+}
+
 body {
     margin: 0;
     overflow: hidden;
@@ -18,15 +23,25 @@ body {
     opacity: 0;
 }
 .header-content-container {
-    width: 50vw;
-    height: 30vh;
-    background-color: rgba(98, 190, 233, 0.862);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.497);
+    width: 55vw;
+    height: 55vh;
+    background-color: #d9d9d932;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: relative;
+}
+.header-content-text-button {
+    width: 100%;
+    height: 100%;
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    padding: 15vw 5vw;
+    gap: 0;
+    
 }
 .header-content-container22 {
     display: flex;
@@ -37,13 +52,50 @@ body {
     height: 45vh;
 }
 .header-content-text {
+    text-align: left;
+    font-size: 2vw;
+    color: white;
+    width: 60%;
+    font-family: Inter;
+    font-weight: 400;
+    z-index: 1;
+    padding: 3vw 0 0 0;
+}
+.button-dragon_caption {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 95%;
+    padding: 0;
+    margin: 0;
+    
+}
+.dragon-caption {
+    padding: 3vw;
+    color: rgba(255, 255, 255, 0.667);
+    font-family: Inter;
+    font-weight: 100;
+    font-size: 1vw;
     text-align: center;
-    width: 80%;
+    margin: 0 -3vw 0 0;
 }
-.header-button {
-    padding: 0.5vw 1vw;
-    border-radius: 15px;
+.header-content-dragon-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    justify-content: center;
+    align-items: center;
+    
 }
+.dragon{
+    position: absolute;
+    left: 20%;
+    top: 0;
+    width:800px;
+    height:800px;
+    /* border: 1px solid rgba(0, 0, 0, 0.201); */
+}
+
 .bg-vid {
     width: 100vw;
     height: auto;
@@ -53,6 +105,20 @@ body {
     z-index: -1;
     filter: blur(4px);
 }
+
+.fasterBtn {
+    z-index: 1;
+    position: absolute;
+    bottom: 5vh;
+    right: 5vw;
+    opacity: 0;
+    width: 5vw;
+    cursor: pointer;
+}
+.fasterBtn-addAppear {
+    animation: btn-apper 1s forwards;
+}
+
 .filter-remove {
     filter: blur(0);
 }
@@ -68,13 +134,7 @@ body {
 .bg-vid-dissapper {
     animation: bg-vid-dissapper 1s forwards;
 }
-.dragon {
-    position: absolute;
-    width: 50vw;
-    height: auto;
-    z-index: 1;
-    animation: dragon-fly 20s infinite;
-}
+
 @keyframes bg-vid-dissapper {
     from {
         opacity: 1;
@@ -82,6 +142,16 @@ body {
     }
     to {
         opacity: 0;
+        
+    }   
+}
+@keyframes btn-apper {
+    from {
+        opacity: 0;
+        
+    }
+    to {
+        opacity: 1;
         
     }   
 }
@@ -129,3 +199,56 @@ body {
         transform: translate(0);
     }   
 }
+
+
+  /* second check it out btn styles */
+
+  
+  .button {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    text-decoration: none;
+    font-family: Inter;
+    font-weight: 300;
+    font-size: 1.2vw;
+    padding: 0.75em 1em;
+    text-transform: uppercase;
+    color: rgb(254, 254, 254);
+    border: 0.15em solid rgba(221, 218, 218, 0.179);
+    border-radius: calc(0.75em + 0.5em + 0.15em);
+    transition: 4s;
+    width: 100%;
+    cursor: pointer;
+    background-color: #ffffff56;
+  }
+  .button:before, .button:after {
+    content: "";
+    position: absolute;
+    top: -1.5em;
+    z-index: -1;
+    width: 200%;
+    aspect-ratio: 1;
+    border: none;
+    border-radius: 40%;
+    background-color: rgba(255, 0, 0, 0);
+    transition: 4s;
+  }
+  .button:before {
+    left: -80%;
+    transform: translate3d(0, 5em, 0) rotate(-340deg);
+  }
+  .button:after {
+    right: -80%;
+    transform: translate3d(0, 5em, 0) rotate(390deg);
+  }
+  .button:hover, .button:focus {
+    color: white;
+    border: 0.15em solid rgb(138, 173, 228);
+  }
+  .button:hover:before, .button:hover:after, .button:focus:before, .button:focus:after {
+    transform: none;
+    background-color: rgb(138, 173, 228);
+    
+  }
